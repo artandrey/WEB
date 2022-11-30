@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hidden {
+    display: none;
+}
+.container {
+    padding: 20px;
+}
+label {
+    display: inline-block;
+}
+ul {
+    list-style: none;
+}
+#blocks:checked ~ label[for='blocks'],
+#list:checked ~ label[for='list'] {
+    transform: scale(1.2);
+}
+
+.dispay-mode-button {
+    margin: 0 20px;
+}
+
+.dispay-mode-button__icon {
+    width: 20px;
+}
+
+.product__image {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+}
+.products-list__item {
+    margin: 20px;
+    padding: 10px;
+    height: 400px;
+    border: solid 1px #222;
+}
+
+.stars-wrapper__label {
+    display: inline-block;
+}
+.stars-wrapper__label::before {
+    content: '\2605';
+    font-size: 24px;
+    color: #e0850c;
+}
+.stars-wrapper__input:checked ~ .stars-wrapper__label::before {
+    content: '\2606';
+}
+.stars-wrapper__input:checked + .stars-wrapper__label::before {
+    content: '\2605';
+}
+
+.stars-wrapper:not(:has(.stars-wrapper__input:checked))
+    .stars-wrapper__label::before {
+    content: '\2606';
+}
+.product__adictive-info p {
+    max-height: 75px;
+    overflow: hidden;
+}
+.products-list__item:hover .product__adictive-info p {
+    overflow-y: auto;
+}
+.products-list__item:hover .stars-wrapper__label {
+    animation: jump 1s 1;
+    animation-delay: var(--delay);
+}
+
+.product__adictive-info p::-webkit-scrollbar {
+    width: 4px;
+    background-color: rgb(139, 139, 139);
+}
+
+.product__adictive-info p::-webkit-scrollbar-thumb {
+    background-color: #222;
+}
+/* @supports (display: -webkit-box) {
+    .product__adictive-info p {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+} */
+
+/* -------------------------- BLOCK STYLES */
+
+#blocks:checked ~ .shop .products-list__item {
+    width: 340px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+#blocks:checked ~ .shop .products-list__item .product__image {
+    margin: 0 auto;
+    display: block;
+}
+/* -------------------------- LIST STYLES */
+#list:checked ~ .shop .products-list__item {
+    display: block;
+}
+@media screen and (max-width: 786px) {
+    .dispay-mode-button {
+        display: none;
+    }
+}
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
