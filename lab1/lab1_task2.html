@@ -1,37 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 2</title>
-    <style>
-        table {
-            width: 400px;
-            height: 400px;
-            border-collapse: collapse;
-            border-style: none;
-        }
-        td {
-            border: solid #000 5px;
-        }
-    </style>
-</head>
-<body>
-    <table>
-        <tbody>
-            <tr>
-                <td colspan="2"></td>
-                <td colspan="3"></td>
-                <td colspan="3"></td>
-            </tr>
-            <tr>
-                <td rowspan="2"></td>
-                <td rowspan="3" colspan="4"></td>
-                <td colspan="3" rowspan="2"></td>
-            </tr>
-
-        </tbody>
-    </table>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task 2</title>
+        <style>
+            table {
+                width: 400px;
+                height: 500px;
+                border-collapse: collapse;
+                border-style: none;
+            }
+            td {
+                border: solid #000 5px;
+            }
+            thead td {
+                border-top-color: transparent;
+                border-left-color: transparent;
+                border-right-color: transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="3"></td>
+                    <td colspan="2" style="background-color: #fffa69"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"></td>
+                    <td
+                        style="background-color: #ff5b2d"
+                        colspan="4"
+                        rowspan="4"
+                    ></td>
+                    <td
+                        style="background-color: #fffa69"
+                        colspan="2"
+                        rowspan="2"
+                    ></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td rowspan="3"></td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td style="background-color: #1d1d1d"></td>
+                    <td style="background-color: #1d1d1d"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fffa69" rowspan="3"></td>
+                    <td style="background-color: #1d1d1d"></td>
+                    <td style="background-color: #1d1d1d"></td>
+                    <td colspan="2"></td>
+                    <td
+                        style="background-color: #ff5b2d"
+                        colspan="2"
+                        rowspan="2"
+                    ></td>
+                </tr>
+                <tr>
+                    <td
+                        style="background-color: #ff5b2d"
+                        rowspan="2"
+                        colspan="2"
+                    ></td>
+                    <td style="background-color: #1d1d1d" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
 </html>
