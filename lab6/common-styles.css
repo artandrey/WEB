@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: max-content;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.recipes-list {
+    display: block;
+}
+.recipes-list-item {
+    width: 16rem;
+    padding: 2rem 1rem;
+    border: dashed hsl(0, 0%, 27%) 2px;
+    display: inline-block;
+}
+.recipe-header {
+    margin: 0.25rem 0;
+    font-size: 2rem;
+}
