@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Сортувати за днем прийому</h2>
+    <br>
+    <label for="day-1">
+        Будні
+    </label>
+    <input value="weekday" checked type="checkbox" name="day" id="day-1">
+    <label>
+        Вихідні
+    </label for="day-2">
+    <input value="weekend" checked type="checkbox" name="day" id="day-2">
+    <hr>
+    
+    <h2>Сортувати за часом роботи</h2>
+    <br>
+    <label for="time-1">
+        Перша половина дня
+    </label>
+    <input value="first" checked type="checkbox" name="time" id="time-1">
+    <label for="time-2">
+        Друга пловина дня
+    </label>
+    <input value="second" checked type="checkbox" name="time" id="time-2">
+    <hr>
+    
+    <h2>Сортувати за рівнем фахової категорії</h2>
+    <br>
+    <label for="type-1">
+        Лікар
+    </label>
+    <input value="pro" checked type="checkbox" name="type" id="type-1">
+    <label for="type-2">
+        Стажер
+    </label>
+    <input value="trainee" checked type="checkbox" name="type" id="type-2">
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Спеціальність</td>
+                <td>ПІБ</td>
+                <td>Рівень (категорія) фахівця</td>
+                <td>Номер кабінету</td>
+                <td>Години прийому</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-day="weekday" data-time="full" data-qualify="pro">
+                <td>Кардіолог</td>
+                <td>Мелащенко Флор Сарматович</td>
+                <td>Лікар</td>
+                <td>23</td>
+                <td>10:00-20:00</td>
+            </tr>
+            <tr data-day="weekday" data-time="full" data-qualify="pro">
+                <td>Хірург</td>
+                <td>Підопригора Еразм Адамович</td>
+                <td>Лікар</td>
+                <td>41</td>
+                <td>8:00-20:00</td>
+            </tr>
+            <tr data-day="weekday" data-time="first" data-qualify="trainee">
+                <td>Невропатолог</td>
+                <td>Сенюта Мартин Устимович</td>
+                <td>Стажер</td>
+                <td>421</td>
+                <td>8:00-9:00</td>
+            </tr>
+            <tr data-day="weekend" data-time="first" data-qualify="pro">
+                <td>Офтальмолог</td>
+                <td>Курцевич Звенимир Федорович</td>
+                <td>Лікар</td>
+                <td>124</td>
+                <td>8:00-9:00</td>
+            </tr>
+            <tr data-day="weekend" data-time="second" data-qualify="pro">
+                <td>Педіатр</td>
+                <td>Красовський Благовіст Владиславович</td>
+                <td>Лікар</td>
+                <td>312</td>
+                <td>15:00-17:00</td>
+            </tr>
+            <tr data-day="weekend" data-time="second" data-qualify="trainee">
+                <td>Офтальмолог</td>
+                <td>Барвінський Артем Радимович</td>
+                <td>Стажер</td>
+                <td>312</td>
+                <td>16:00-20:00</td>
+            </tr>
+            <tr data-day="weekend" data-time="full" data-qualify="trainee">
+                <td>Кардіолог</td>
+                <td>Симиренко Життєлюб Зорянович</td>
+                <td>Стажер</td>
+                <td>421</td>
+                <td>8:00-20:00</td>
+            </tr>
+            <tr data-day="weekend" data-time="full" data-qualify="trainee">
+                <td>Невропатолог</td>
+                <td>Сулименко Явдоха Радимівна</td>
+                <td>Стажер</td>
+                <td>15</td>
+                <td>8:00-20:00</td>
+            </tr>
+            <tr data-day="weekend" data-time="full" data-qualify="trainee">
+                <td>Кардіолог</td>
+                <td>Потебенько Йовілла Глібівна</td>
+                <td>Стажер</td>
+                <td>512</td>
+                <td>8:00-20:00</td>
+            </tr>
+            <tr data-day="weekday" data-time="full" data-qualify="trainee">
+                <td>Невропатолог</td>
+                <td>Лебединська Лукреція Макарівна</td>
+                <td>Стажер</td>
+                <td>521</td>
+                <td>8:00-19:00</td>
+            </tr>
+            <tr data-day="weekday" data-time="first" data-qualify="trainee">
+                <td>Кардіолог</td>
+                <td>Демуцька Ілона Захарівна</td>
+                <td>Стажер</td>
+                <td>62</td>
+                <td>8:00-12:00</td>
+            </tr>
+            <tr data-day="weekday" data-time="second" data-qualify="pro">
+                <td>Невропатолог</td>
+                <td>Іваненко Жозефіна Богданівна</td>
+                <td>Лікар</td>
+                <td>362</td>
+                <td>18:00-19:00</td>
+            </tr>
+            <tr data-day="weekday" data-time="first" data-qualify="pro">
+                <td>Офтальмолог</td>
+                <td>Шищенко Йосифата Богданівна</td>
+                <td>Лікар</td>
+                <td>263</td>
+                <td>8:00-10:00</td>
+            </tr>
+            <tr data-day="weekday" data-time="full" data-qualify="pro">
+                <td>Невропатолог</td>
+                <td>Приймаченко Гелена Герасимівна</td>
+                <td>Лікар</td>
+                <td>236</td>
+                <td>7:00-20:00</td>
+            </tr>
+            <tr data-day="weekday" data-time="full" data-qualify="pro">
+                <td>Невропатолог</td>
+                <td>Приймаченко Гелена Герасимівна</td>
+                <td>Лікар</td>
+                <td>236</td>
+                <td>8:00-20:00</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

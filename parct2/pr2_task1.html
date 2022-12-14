@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <title>Task 1</title>
+    </head>
+    <body>
+        <form action="#">
+            <label
+                >Name <br><input
+                    required
+                    placeholder="Your Name"
+                    type="text"
+                    name="name"
+            ></label>
+            <br>
+            <br>
+            <label
+                >Email <br><input
+                    required
+                    placeholder="Your email"
+                    type="email"
+                    name="email"
+            ></label>
+            <br>
+            <br>
+
+            <div>
+                <span>Sex</span>
+                <br>
+                <label>
+                    <input checked type="radio" name="sex" >
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="sex" >
+                    Female
+                </label>
+            </div>
+            <div>
+                <span>Current status</span>
+                <br>
+                <label> <input type="checkbox" name="status" >Student</label>
+                <br><label
+                    ><input type="checkbox" name="status" >Employed</label
+                >
+                <br><label
+                    ><input type="checkbox" name="status" >Unemployed</label
+                >
+            </div>
+            <br>
+            <br>
+            <label>
+                Birthday <br>
+                <input type="date" name="birth-date" >
+            </label>
+            <br>
+            <br>
+            <label>
+                Skills andThechnologies
+                <br>
+                <select name="skills" multiple>
+                    <optgroup label="Tech skills">
+                        <option>HTML</option>
+                        <option>CSS</option>
+                        <option>Javascript</option>
+                        <option>ASP.NET</option>
+                        <option>PHP</option>
+                    </optgroup>
+                    <optgroup label="Soft skills">
+                        <option>Time management</option>
+                        <option>Productivity</option>
+                        <option>Teamwork</option>
+                        <option>Leadership</option>
+                    </optgroup>
+                </select>
+            </label>
+            <br>
+            <br>
+            <label>
+                Photo <br>
+                <input accept="image/*" type="file" name="photo" >
+            </label>
+            <br>
+            <br>
+            <label>
+                Comments
+                <br>
+                <textarea name="comment" cols="30" rows="5"></textarea>
+            </label>
+            <br><br>
+            <input type="submit" >
+            <input type="reset" >
+        </form>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    width: 100vw;
+    border-collapse: collapse;
+}
+
+td, tr {
+    border: solid 1px #000;
+}
+
+td {
+    padding: 0.25em 0.2em;
+}
+
+thead {
+    background-color: rgb(112, 112, 112);
+    color: white;
+}
+
+
+/* FILTERING */
+
+
+
+input[value="weekday"]:not(:checked) ~ table tbody tr[data-day="weekday"] {
+    display: none;
+}
+input[value="weekend"]:not(:checked) ~ table tbody tr[data-day="weekend"] {
+    display: none;
+}
+input[value="first"]:not(:checked) ~ table tbody tr[data-time="first"] {
+    display: none;
+}
+input[value="second"]:not(:checked) ~ table tbody tr[data-time="second"] {
+    display: none;
+}
+input[value="pro"]:not(:checked) ~ table tbody tr[data-qualify="pro"] {
+    display: none;
+}
+input[value="trainee"]:not(:checked) ~ table tbody tr[data-qualify="trainee"] {
+    display: none;
+}
+
+/* Чому за допомогою класів не можливо
+виділити контрастним кольором стовпець,
+на який наведений курсор?  */
+
+/* можливо за допомогою псевдоклассів */
+
+tbody:has(td:nth-child(1):hover) td:nth-child(1) {
+    background-color: rgb(237, 241, 193);
+  }
+  
+  tbody:has(td:nth-child(2):hover) td:nth-child(2) {
+    background-color: rgb(237, 241, 193);
+  }
+  
+  tbody:has(td:nth-child(3):hover) td:nth-child(3) {
+    background-color: rgb(237, 241, 193);
+  }
+  
+  tbody:has(td:nth-child(4):hover) td:nth-child(4) {
+    background-color: rgb(237, 241, 193);
+  }
+  
+  tbody:has(td:nth-child(5):hover) td:nth-child(5) {
+    background-color: rgb(237, 241, 193);
+  }
+tbody tr:hover {
+    background-color: rgb(146, 210, 235) !important;
+}
+
+tbody td:hover {
+    background-color: rgb(238, 236, 142) !important;
+}
+

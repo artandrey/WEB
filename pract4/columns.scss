@@ -1,0 +1,5 @@
+@for $i from 1 through 5 {
+    tbody:has(td:nth-child(#{$i}):hover) td:nth-child(#{$i}) {
+        background-color: rgb(237, 241, 193);
+    }
+}
