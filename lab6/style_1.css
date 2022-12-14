@@ -1,0 +1,10 @@
+.recipe-additional {
+    display: none;
+    position: absolute;
+}
+.recipes-list-item {
+    cursor: pointer;
+}
+.recipes-list-item:hover .recipe-additional {
+    display: block;
+}
