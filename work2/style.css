@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+button {
+    cursor: pointer;
+}
+
+.site-header {
+    padding-top: 135px;
+    min-height: 500px;
+    background-image: url(./images/header-background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.site-title {
+    font-size: 3.75rem;
+    color: #ffffff;
+    font-weight: 250;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.site-moto {
+    margin-top: 28px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 920px;
+    width: calc(100% - 15px);
+}
+
+.form-wrapper {
+    margin-top: 60px;
+}
+
+.content-form {
+    padding: 16px 20px;
+    background-color: hsla(0, 0%, 0%, 0.651);
+}
+
+.content-form > *:not(:last-child) {
+    margin-right: 10px;
+}
+
+.text-input, .submit-button {
+    padding: 15px 20px;
+    vertical-align: middle;
+}
+
+.text-input {
+    width: 320px;
+    font-size: 1rem;
+}
+
+.submit-button {
+    width: 200px;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #ae2c52;
+    border: none;
+}
+
+.policy-description {
+    font-size: 0.75rem;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.header-form-description {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+.product-section {
+    padding: 110px 0 58px 0;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #404040;
+    text-align: center;
+}
+
+.product-wrapper {
+    margin-top: 30px;
+}
+
+.product-prciture {
+    margin-right: 28px;
+    width: 8.375rem;
+    float: left;
+    vertical-align: middle;
+}
+
+.product-description {
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+    color: #404040;
+}
+
+.product-description:not(:first-of-type) {
+    margin-top: 2.875rem;
+}
+
+.site-footer {
+    padding-bottom: 48px;
+}
+
+@media screen and (max-width: 920px) {
+    .site-header, .product-section, .site-footer {
+        padding: 20px;
+    }
+    .site-header {
+        padding-top: 100px;
+        min-height: 100vh;
+    }
+    .content-form {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+    .content-form .text-input {
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+    }
+    .content-form > *:not(:first-child) {
+        margin-top: 10px;
+    }
+    .submit-button {
+        display: block;
+    }
+}

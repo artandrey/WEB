@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="task_3.css">
+    <link rel="stylesheet" href="task_3_filtering.css">
+</head>
+<body>
+    <header>
+        <h1 class="page-title">Тортики <span class="accent-color accent-font">&</span> Тістечка</h1>
+    </header>
+    <main class="container">
+        <input data-filter-role="pie" type="radio" name="menu-filter" id="menu-radio-1" class="hidden">
+        <input data-filter-role="cup-cake" type="radio" name="menu-filter" id="menu-radio-2" class="hidden">
+        <input data-filter-role="roulette" type="radio" name="menu-filter" id="menu-radio-3" class="hidden">
+        <input data-filter-role="cake" type="radio" name="menu-filter" id="menu-radio-4" class="hidden">
+        <input data-filter-role="pancake" type="radio" name="menu-filter" id="menu-radio-5" class="hidden">
+        <input data-filter-role="reset" checked type="radio" name="menu-filter" id="menu-radio-6" class="hidden">
+        <aside>
+            <div class="range-filter-wrapper">
+                <span>Калорії у порції</span>
+                <div class="range-filter"><div class="range-wrapper"><div class="range"></div></div></div>
+                <span>Від 0 до 400 кКал</span>
+
+            </div>
+            <ul class="filter-list">
+                <li class="filter-list__item"><label for="menu-radio-1" class="filter-button">Пиріг</label></li>
+                <li class="filter-list__item"><label for="menu-radio-2" class="filter-button">Тістечко</label></li>
+                <li class="filter-list__item"><label for="menu-radio-3" class="filter-button">Рулет</label></li>
+                <li class="filter-list__item"><label for="menu-radio-4" class="filter-button">Торт</label></li>
+                <li class="filter-list__item"><label for="menu-radio-5" class="filter-button">Сирник</label></li>
+                <li class="filter-list__item"><label for="menu-radio-6" class="filter-button">Скинути фільтр</label></li>
+            </ul>
+        </aside>
+        <ul class="menu-list">
+            <li data-item-role="pie" class="menu-list__item">
+                <div class="menu-item__main-info">
+                    <img class="menu-item__picture" src="./images/1.jpg" alt="pyrih"> 
+                    <div class="menu-item__heading">
+                        <span class="menu-item__type">пиріг</span>
+                        <h2 class="menu-item__title">Смачний</h2>
+                    </div>
+                </div>
+                <div class="menu-item__additional-info">
+                    <p class="menu-item__description">Калорії у порції 235 кКал</p>
+                </div>
+            </li>
+            <li data-item-role="pie" class="menu-list__item">
+                <div class="menu-item__main-info">
+                    <img class="menu-item__picture" src="./images/2.webp" alt="pyrih"> 
+                    <div class="menu-item__heading">
+                        <span class="menu-item__type">пиріг</span>
+                        <h2 class="menu-item__title">Смачний пиріг з начинкою</h2>
+                    </div>
+                </div>
+                <div class="menu-item__additional-info">
+                    <p class="menu-item__description">Калорії у порції 225 кКал</p>
+                </div>
+            </li>
+            <li data-item-role="cup-cake" class="menu-list__item">
+                <div class="menu-item__main-info">
+                    <img class="menu-item__picture" src="./images/3.webp" alt="pyrih"> 
+                    <div class="menu-item__heading">
+                        <span class="menu-item__type">Тістечко</span>
+                        <h2 class="menu-item__title">"Корзинка"</h2>
+                    </div>
+                </div>
+                <div class="menu-item__additional-info">
+                    <p class="menu-item__description">Калорії у порції 200 кКал</p>
+                </div>
+            </li>
+            <li data-item-role="cup-cake" class="menu-list__item">
+                <div class="menu-item__main-info">
+                    <img class="menu-item__picture" src="./images/4.webp" alt="pyrih"> 
+                    <div class="menu-item__heading">
+                        <span class="menu-item__type">Тістечко</span>
+                        <h2 class="menu-item__title">Празьке</h2>
+                    </div>
+                </div>
+                <div class="menu-item__additional-info">
+                    <p class="menu-item__description">Калорії у порції 245 кКал</p>
+                </div>
+            </li>
+            <li data-item-role="pancake" class="menu-list__item">
+                <div class="menu-item__main-info">
+                    <img class="menu-item__picture" src="./images/5.webp" alt="pyrih"> 
+                    <div class="menu-item__heading">
+                        <span class="menu-item__type">Сирники</span>
+                        <h2 class="menu-item__title">з бананом</h2>
+                    </div>
+                </div>
+                <div class="menu-item__additional-info">
+                    <p class="menu-item__description">Калорії у порції 335 кКал</p>
+                </div>
+            </li>
+            <li data-item-role="pancake"  class="menu-list__item">
+                <div class="menu-item__main-info">
+                    <img class="menu-item__picture" src="./images/6.webp" alt="pyrih"> 
+                    <div class="menu-item__heading">
+                        <span class="menu-item__type">Сирники</span>
+                        <h2 class="menu-item__title">з манкою</h2>
+                    </div>
+                </div>
+                <div class="menu-item__additional-info">
+                    <p class="menu-item__description">Калорії у порції 305 кКал</p>
+                </div>
+            </li>
+            <li data-item-role="roulette" class="menu-list__item">
+                <div class="menu-item__main-info">
+                    <img class="menu-item__picture" src="./images/7.jpg" alt="pyrih"> 
+                    <div class="menu-item__heading">
+                        <span class="menu-item__type">рулет</span>
+                        <h2 class="menu-item__title">Крутий шоколадний</h2>
+                    </div>
+                </div>
+                <div class="menu-item__additional-info">
+                    <p class="menu-item__description">Калорії у порції 225 кКал</p>
+                </div>
+            </li>
+            <li data-item-role="roulette" class="menu-list__item">
+                <div class="menu-item__main-info">
+                    <img class="menu-item__picture" src="./images/8.jpg" alt="pyrih"> 
+                    <div class="menu-item__heading">
+                        <span class="menu-item__type">рулет</span>
+                        <h2 class="menu-item__title">Смачний бісквітний</h2>
+                    </div>
+                </div>
+                <div class="menu-item__additional-info">
+                    <p class="menu-item__description">Калорії у порції 227 кКал</p>
+                </div>
+            </li>
+            <li data-item-role="cake" class="menu-list__item">
+                <div class="menu-item__main-info">
+                    <img class="menu-item__picture" src="./images/9.jfif" alt="pyrih"> 
+                    <div class="menu-item__heading">
+                        <span class="menu-item__type">Торт</span>
+                        <h2 class="menu-item__title">Київський</h2>
+                    </div>
+                </div>
+                <div class="menu-item__additional-info">
+                    <p class="menu-item__description">Калорії у порції 327 кКал</p>
+                </div>
+            </li>
+            <li data-item-role="cake" class="menu-list__item">
+                <div class="menu-item__main-info">
+                    <img class="menu-item__picture" src="./images/10.jpg" alt="pyrih"> 
+                    <div class="menu-item__heading">
+                        <span class="menu-item__type">Торт</span>
+                        <h2 class="menu-item__title">Наполеон</h2>
+                    </div>
+                </div>
+                <div class="menu-item__additional-info">
+                    <p class="menu-item__description">Калорії у порції 319 кКал</p>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <footer class="container">
+        <span class="footer-contacts">Контакти: <a href="mailto:tortik@smakota.ua">tortik@smakota.ua</a></span> <span class="footer-contacts">© 2019 Smakota</span>
+    </footer>
+</body>
+</html>

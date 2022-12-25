@@ -1,0 +1,31 @@
+.menu-list li {
+    display: none;
+}
+
+input[data-filter-role="reset"]:checked ~ .menu-list li {
+    display: flex;
+}
+
+input[data-filter-role="pie"]:checked ~ .menu-list li[data-item-role="pie"] {
+    display: flex;
+}
+input[data-filter-role="cup-cake"]:checked ~ .menu-list li[data-item-role="cup-cake"] {
+    display: flex;
+}
+input[data-filter-role="roulette"]:checked ~ .menu-list li[data-item-role="roulette"] {
+    display: flex;
+}
+input[data-filter-role="cake"]:checked ~ .menu-list li[data-item-role="cake"] {
+    display: flex;
+}
+input[data-filter-role="pancake"]:checked ~ .menu-list li[data-item-role="pancake"] {
+    display: flex;
+}
+#menu-radio-1:checked ~ aside .filter-list label[for="menu-radio-1"],
+#menu-radio-2:checked ~ aside .filter-list label[for="menu-radio-2"],
+#menu-radio-3:checked ~ aside .filter-list label[for="menu-radio-3"],
+#menu-radio-4:checked ~ aside .filter-list label[for="menu-radio-4"],
+#menu-radio-5:checked ~ aside .filter-list label[for="menu-radio-5"] {
+    background-color: rgb(241, 241, 241);
+    transform: scale(1.01);
+}

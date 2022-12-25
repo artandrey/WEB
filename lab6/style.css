@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: 100vw;
+}
+.recipes-list {
+    display: block;
+}
+.recipes-list-item {
+    width: 24%;
+    padding: 2rem 1rem;
+    border: dashed hsl(0, 0%, 27%) 2px;
+    display: inline-block;
+    background-color: #fff;
+}
+.recipe-picture {
+    width: 100%;
+}
+.recipe-header {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+}
+.recipe-additional {
+    padding: inherit;
+}
+.recipe-ingrdients-list {
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+.recipe-ingredient-item::marker {
+    margin-top: 1em;
+    color: rgb(136, 36, 175);
+}
+.recipe-instruction {
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+.hidden {
+    display: none;
+}
+.recipe-additional {
+    display: none;
+    position: absolute;
+    border: inherit;
+    width: calc(100%  + 4px);
+    left: -2px;
+    top: 100%;
+    border-bottom: dashed 2px;
+    border-top: unset;
+    white-space: normal;
+    background-color: #fff;
+}
+.recipes-list-item {
+    cursor: pointer;
+    position: relative;
+}
+.recipes-list-item:hover {
+    border-bottom: unset;
+    z-index: 2;
+}
+.recipes-list-item:hover .recipe-additional {
+    display: block;
+}
+.close-button {
+    display: block;
+    font-size: 100px;
+    color: aliceblue;
+}
+.image-wrapper {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(53, 53, 53, 0.658);
+    z-index: 2;
+}
+.recipes-list-item {
+    min-height: 220px;
+    vertical-align: text-top;
+}
+.open-toogle-area {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+.image-wrapper .open-toogle-area {
+    inset: unset;
+    top: 20px;
+    right: 20px;
+}
+.image-wrapper .recipe-picture {
+    width: 50%;
+    max-width: 848px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slider {
+    --slides-per-page-count: 4;
+    --spacing: 1rem;
+    --slides-per-move-count: 1;
+    --slide-width: calc((100% - var(--spacing) * var(--slides-per-page-count)) / var(--slides-per-page-count));
+    --move-width: calc((var(--spacing) + var(--slide-width)) * var(--slides-per-move-count));
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 100px 0;
+    display: table;
+    max-width: 1400px;
+    min-height: 100vh;
+}
+.recipes-list {
+    font-size: 0;
+    white-space: nowrap;
+    order: 0;
+    display: table-header-group;
+    transition: transform 300ms ease-in-out;
+}
+
+.recipes-list-item {
+    margin-right: var(--spacing);
+    width: var(--slide-width);
+}
+
+.slider-control {
+    margin: 0 1em;
+    margin-top: 4rem;
+    position: relative;
+    left: 45%;
+}
+
+#page-0:checked ~ .recipes-list {
+    --index: 0;
+}
+#page-1:checked ~ .recipes-list {
+    --index: 1;
+}
+#page-2:checked ~ .recipes-list {
+    --index: 2;
+}
+#page-3:checked ~ .recipes-list {
+    --index: 3;
+}
+#page-4:checked ~ .recipes-list {
+    --index: 4;
+}
+#page-5:checked ~ .recipes-list {
+    --index: 5;
+}
+#page-6:checked ~ .recipes-list {
+    --index: 6;
+}
+#page-7:checked ~ .recipes-list {
+    --index: 7;
+}
+#page-8:checked ~ .recipes-list {
+    --index: 8;
+}
+#page-9:checked ~ .recipes-list {
+    --index: 9;
+}
+#page-10:checked ~ .recipes-list {
+    --index: 10;
+}
+.slider-control:checked ~ .recipes-list {
+    transform: translateX(calc(var(--move-width) * var(--index) * -1));
+}
+
+.controls {
+    position: absolute;
+    top: 12rem;
+    user-select: none;
+}
+
+.forward {
+    right: 2rem;
+}
+
+.backward {
+    left: 2rem;
+}
+
+.controls ul li {
+    display: none;
+}
+
+.controls ul li label {
+    padding: 1rem 2rem;
+    display: inline-block;
+    font-size: 4em;
+    border-radius: 2em;
+    background-color: hsla(0, 0%, 54%, 0.993);
+    color: #fff;
+    cursor: pointer;
+}
+
+#page-0:checked ~ .forward ul li:nth-child(1) {
+    display: inline-block;
+}
+#page-1:checked ~ .forward ul li:nth-child(2) {
+    display: inline-block;
+}
+#page-2:checked ~ .forward ul li:nth-child(3) {
+    display: inline-block;
+}
+#page-3:checked ~ .forward ul li:nth-child(4) {
+    display: inline-block;
+}
+#page-4:checked ~ .forward ul li:nth-child(5) {
+    display: inline-block;
+}
+#page-5:checked ~ .forward ul li:nth-child(6) {
+    display: inline-block;
+}
+#page-6:checked ~ .forward ul li:nth-child(7) {
+    display: inline-block;
+}
+#page-7:checked ~ .forward ul li:nth-child(8) {
+    display: inline-block;
+}
+#page-8:checked ~ .forward ul li:nth-child(9) {
+    display: inline-block;
+}
+
+
+#page-1:checked ~ .backward ul li:nth-child(1) {
+    display: inline-block;
+}
+#page-2:checked ~ .backward ul li:nth-child(2) {
+    display: inline-block;
+}
+#page-3:checked ~ .backward ul li:nth-child(3) {
+    display: inline-block;
+}
+#page-4:checked ~ .backward ul li:nth-child(4) {
+    display: inline-block;
+}
+#page-5:checked ~ .backward ul li:nth-child(5) {
+    display: inline-block;
+}
+#page-6:checked ~ .backward ul li:nth-child(6) {
+    display: inline-block;
+}
+#page-7:checked ~ .backward ul li:nth-child(7) {
+    display: inline-block;
+}
+#page-8:checked ~ .backward ul li:nth-child(8) {
+    display: inline-block;
+}
+#page-9:checked ~ .backward ul li:nth-child(9) {
+    display: inline-block;
+}
+
+
+#item-1:checked ~ .modal-window .item-1 {
+    display: block;
+}
+#item-2:checked ~ .modal-window .item-2 {
+    display: block;
+}
+#item-3:checked ~ .modal-window .item-3 {
+    display: block;
+}
+#item-4:checked ~ .modal-window .item-4 {
+    display: block;
+}
+#item-5:checked ~ .modal-window .item-5 {
+    display: block;
+}
+#item-6:checked ~ .modal-window .item-6 {
+    display: block;
+}
+#item-7:checked ~ .modal-window .item-7 {
+    display: block;
+}
+#item-8:checked ~ .modal-window .item-8 {
+    display: block;
+}
+#item-9:checked ~ .modal-window .item-9 {
+    display: block;
+}
+#item-10:checked ~ .modal-window .item-10 {
+    display: block;
+}
